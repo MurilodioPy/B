@@ -1,0 +1,62 @@
+
+Neste trabalho os alunos deverão desenvolver um programa para ajudar a pessoas a participarem de bolões da mega sena.
+
+MENU DO PROGRAMA
+
+***BOLAO DA MEGA-SENA***
+0 Sair
+1 Inser números manualmente
+2 Importar números de arquivo
+3 Visualizar números já importados
+4 Valor total disponível
+5 Gerar jogos.
+
+
+EXEMPLO ARQUIVO DE IMPORTAÇÃO
+
+EduardoASilvestre 01 02 03 04 05 06
+JairMessiasBolsonaro 20 21 22 23 24 25
+LulaDaSilva 10 11 12 13 14 15
+
+
+COMENTÁRIOS ADICIONAIS
+
+As opções do Loop são as seguintes.
+0 - Apenas sair.
+1 - A pessoa digita o seu nome e os números manualmente.
+2 - Abre um arquivo de texto e importa estes números para o programa.
+3 - Visualiza todos os números importados.
+4 - Digita o montante total disponível para jogos.
+5 - O programa deve gerar todos os jogos de acordo com o montante disponível. A prioridade é gerar jogos com o maior valor possível e minimizar o desperdício.
+Se o montante disponível é de R$ 1000 o programa deve gerar um jogo de 10 números e jogos  de 6 números.
+Consulte o site http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena e coloque os valores dos jogos no programa.
+O programa deve usar o máximo de dinheiro possível.
+O programa deve gerar em ordem os números mais escolhidos pelas pessoas. Caso haja empate entre números mais escolhidos, o jogo deve escolher um número aleatoriamente entre os empatados. 
+Os próximos jogos devem escolher números não escolhidos anteriormente. Caso não seja possível, gere números aleatoriamente para preeencher os últimos jogos.
+
+SAÍDA DA OPÇÃO 5
+JOGO 1 - X NÚMEROS (Y REAIS) - LISTA DE NÚMEROS
+...
+...
+...
+JOGO N - X NÚMEROS (Y REAIS) - LISTA DE NÚMEROS
+TOTAL GASTO = R$ X
+DINHEIRO RESTANTE =  R$ Y.
+
+
+MAIS INFORMAÇÕES !!
+-O programa sempre inicia sem nenhuma informação.
+-Crie um classe Aposta para colocar os números escolhidos por uma pessoa.
+
+-Crie uma classe Jogo para colocar um jogo e preparar a resposta final (pode ser o toString).
+
+-Para a opção 4..
+
+Coloque as apostas lidas na classe Aposta e em uma coleção. Percorra essa coleção e descubra os números mais escolhidos. 
+
+Imagino uma boa solução colocar os números lidos em um mapa ordenado (TreeMap) 
+
+https://www.devmedia.com.br/conhecendo-a-interface-map-do-java/37463.
+Cada vez que um número for participar de um jogo você pega o 1º número do MAP e remove dele.
+Quando o conteúdo do MAP acabar (se acabar) você sorteia números aleatoriamente.
+-Previna erros com exceções.
